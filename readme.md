@@ -4,6 +4,10 @@ Utilize the security flaws of Lorebary ig. Sophia gotta fix her code bruh
 
 Actually she wouldn't fix it, Claude would cause she vibecoded the whole thing. Yes, its that easy to tell if Claude made it or not, its not rocket science.
 
+The only good thing about the security is that the site has CORS. That's it.
+
+> Last updated: October 16th, 2025
+
 ## Plugins
 
 JSON endpoint for ANY plugin: https://lorebary.sophiamccarty.com/api/plugin/(plugin)
@@ -18,6 +22,14 @@ response is
 
 ```json
 {"meta":{"name":"done","author":"simonthy","tag":"PLUGIN","category":"utility","description":"No description provided","public":true,"updatedAt":"2025-09-28T17:05:44.448Z","creatorUsername":"simonthy","creatorId":"99462802-aac1-4b47-878d-515dec1f72ec","updated":"2025-09-28T17:05:45.596Z","createdAt":"2025-09-28T16:40:51.230Z","rating":5,"ratingCount":2},"triggerGroups":[{"id":0,"name":"main","type":"ALWAYS","chance":3,"keywords":[],"regex":"","flags":"gi","countOperator":">","countValue":10,"priority":50}],"stages":[],"conditions":[],"variables":{},"templates":[],"actions":{"default":[{"type":"ADD_SYSTEM_MESSAGE","pool":["[System Note: You are the world’s narrator: write strictly from the point of view of the world and its characters and never perform, decide, or describe the {{user}}’s actions, choices, or internal states; instead describe what the world makes possible, forces, or reveals (for example, “As you continue your trek…” or “You would be able to notice…”), attribute actions and intent to NPCs and the environment, present obstacles/options as external facts with any mechanical consequences when relevant, and whenever a player decision or action is required immediately, instead of acting for {{user}}, stop the response and end; do not use phrasing that assigns actions or feelings to the {{user}} (e.g., “You open the door,” “You feel…”), remain present-tense and observational throughout.]"]}]},"weightedPools":{},"transformations":[],"regexPatterns":[],"advancedCode":"","logic":{"trigger":{"type":"ALWAYS","chance":3,"keywords":[]},"actions":[{"type":"ADD_SYSTEM_MESSAGE","pool":["[System Note: You are the world’s narrator: write strictly from the point of view of the world and its characters and never perform, decide, or describe the {{user}}’s actions, choices, or internal states; instead describe what the world makes possible, forces, or reveals (for example, “As you continue your trek…” or “You would be able to notice…”), attribute actions and intent to NPCs and the environment, present obstacles/options as external facts with any mechanical consequences when relevant, and whenever a player decision or action is required immediately, instead of acting for {{user}}, stop the response and end; do not use phrasing that assigns actions or feelings to the {{user}} (e.g., “You open the door,” “You feel…”), remain present-tense and observational throughout.]"]}]},"userId":"99462802-aac1-4b47-878d-515dec1f72ec","copyCount":13,"copyHistory":[{"date":"2025-09-28T18:00:14.556Z","userId":"anonymous"},{"date":"2025-09-28T21:26:07.278Z","userId":"anonymous"},{"date":"2025-09-28T22:34:46.716Z","userId":"anonymous"},{"date":"2025-09-28T23:50:44.233Z","userId":"anonymous"},{"date":"2025-09-29T00:42:12.494Z","userId":"anonymous"},{"date":"2025-09-29T01:49:18.649Z","userId":"anonymous"},{"date":"2025-09-29T01:49:21.144Z","userId":"anonymous"},{"date":"2025-09-29T01:49:26.278Z","userId":"anonymous"},{"date":"2025-09-29T02:08:28.858Z","userId":"anonymous"},{"date":"2025-09-29T02:08:48.707Z","userId":"anonymous"},{"date":"2025-09-29T03:55:25.154Z","userId":"anonymous"},{"date":"2025-09-29T08:25:35.952Z","userId":"anonymous"},{"date":"2025-10-16T00:22:24.729Z","userId":"anonymous"}],"lastCopyDate":"2025-10-16T00:22:24.729Z","downloadCount":3,"downloadHistory":[{"date":"2025-09-29T03:55:17.966Z","userId":"anonymous"},{"date":"2025-09-29T03:55:18.212Z","userId":"anonymous"},{"date":"2025-09-29T03:55:18.920Z","userId":"anonymous"}],"lastDownloadDate":"2025-09-29T03:55:18.920Z"}
+```
+
+Also note, some plugins may have the creators IP address in the JSON.
+
+Example one I found, I forgot in which plugin though:
+
+```json
+"creatorIP": "172.69.222.170"
 ```
 
 ## Lorebook
@@ -130,7 +142,10 @@ Example response (from that specific code):
         }
     }
 }
+
 ```
+
+Another funny thing about this is that it's wasting your bandwidth. Just visiting the lorebook page loads like 5 different lorebooks in full ( no matter if they are copylocked btw, anyone with the ability to open inspect element can steal them ).
 
 ### Senarios
 
@@ -193,3 +208,37 @@ Example output:
 ```
 
 Notice that the passwords in the JSON response. Nice work Sophia, so secure.
+
+
+### Rate limiting
+
+There is none. There is absolutely no rate limiting. You can send 36 thousand requests in a minute and nothing stops you. 
+
+I know this because I reported a loli lorebook 36 thousand times in a minute. Glad to see it got banned, not glad to see the lack of security.
+
+![figure 1](image.png)
+
+Proof BTW.
+
+### Reports
+
+You can create a report by calling ```https://lorebary.sophiamccarty.com/api/report/lorebook/(lorebook code)```
+
+
+### Misc
+
+> Note: I last checked these like a week or two ago, so they may be outdated.
+
+#### Plugins:
+
+You can put any length of text as a plugin description. Theres no limit.
+You can also embed images and other HTML (possible XSS).
+
+This mixed with the zero rate limit can possibly result in a issue that could bring the site down at any given moment.
+
+
+### Plugins, lorebooks and scenarios
+
+You can likely spam create thousands of plugins, lorebooks and senarios in less than a minute.
+
+I haven't tested this cause I don't want to ruin the service for others, however it's a concern.
