@@ -1,4 +1,4 @@
-# Lorebary tools. 
+# Lorebary issues
 
 Utilize the security flaws of Lorebary ig. Sophia gotta fix her code bruh
 
