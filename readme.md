@@ -2,7 +2,7 @@
 
 Utilize the security flaws of Lorebary ig. Sophia gotta fix her code bruh
 
-Actually she wouldn't fix it, claude would cause she vibecoded the whole thing. Yes I'm pissed about this cause JAI mods consider this site "safe" and "secure" but not other actually secure apps.
+Actually she wouldn't fix it, Claude would cause she vibecoded the whole thing. Yes, its that easy to tell if Claude made it or not, its not rocket science.
 
 ## Plugins
 
