@@ -6,6 +6,8 @@ Actually she wouldn't fix it, Claude would cause she vibecoded the whole thing. 
 
 The only good thing about the security is that the site has CORS. That's it.
 
+Also, theres probably more vulnerabilites than the ones listed here. But I haven't looked that far into the site.
+
 > Last updated: October 16th, 2025
 
 ## Plugins
