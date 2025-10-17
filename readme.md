@@ -4,7 +4,7 @@ Utilize the security flaws of Lorebary ig. Sophia gotta fix her code bruh
 
 Actually she wouldn't fix it, Claude would cause she vibecoded the whole thing. Yes, its that easy to tell if Claude made it or not, its not rocket science.
 
-The only good thing about the security is that the site has CORS. That's it.
+The only good thing about the security is that the site has CORS (easily bypassable through something like a TompHTTP bare server). That's it.
 
 Also, theres probably more vulnerabilites than the ones listed here. But I haven't looked that far into the site.
 
