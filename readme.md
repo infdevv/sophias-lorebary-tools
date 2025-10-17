@@ -242,3 +242,26 @@ This mixed with the zero rate limit can possibly result in a issue that could br
 You can likely spam create thousands of plugins, lorebooks and senarios in less than a minute.
 
 I haven't tested this cause I don't want to ruin the service for others, however it's a concern.
+
+### Ratings
+
+You can also review-bomb any lorebook. Wild
+
+```javascript
+fetch("https://lorebary.sophiamccarty.com/api/lorebook/rate", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.5",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+  },
+  "body": "{\"code\":\"(code)\",\"rating\":1}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});```
