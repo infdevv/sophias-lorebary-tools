@@ -268,4 +268,5 @@ fetch("https://lorebary.sophiamccarty.com/api/lorebook/rate", {
   "method": "POST",
   "mode": "cors",
   "credentials": "include"
-});```
+});
+```
