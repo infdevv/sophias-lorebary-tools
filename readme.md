@@ -8,6 +8,8 @@ The only good thing about the security is that the site has CORS (easily bypassa
 
 Also, theres probably more vulnerabilites than the ones listed here. But I haven't looked that far into the site.
 
+And these vulns were already reported to Sophia through the site's support page thing. Most of them still work so :/
+
 > Last updated: October 16th, 2025
 
 ## Plugins
